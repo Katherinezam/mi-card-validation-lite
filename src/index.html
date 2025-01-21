@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
-  <title>Tarjeta de crédito válida</title>
+  <title>Banco Seguro - Validación de Tarjetas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-  <input id="cardnumber"></input>
-  <button onclick="validate()">Validar</button>
-  <div id="result"></div>
-  <script lang="javascript">
-    function validate() {
-      const valid = isValid(document.getElementById("cardnumber").value)
-      if (valid) {
-        // Show success in div#result
-      }
-      else {
-        // Show error message in div#result
-      }
-    }
-
-    function isValid(creditCardNumber){
-      // is creditCardNumber valid?
-      return false
-    }
-  </script>
+  <header class="header">
+    <h1>Banco Seguro</h1>
+    <p class="slogan">"Validación segura para tus transacciones financieras."</p>
+  </header>
+  <!--<img src="src/segurida.jpg" alt="Imagen de prueba" />-->
+  <div class="container">
+    <h2>Validador de Tarjetas de Crédito</h2>
+    <p>Ingresa tu número de tarjeta para verificar su validez.</p>
+    <div class="form-group">
+      <input type="number" id="cardnumber" oninput="soloNumeros(this)" placeholder="Ingresa el número de la tarjeta">
+      <button onclick="validate()">Validar</button>
+    </div>
+    <p id="result"></p>
+  </div>
+  <footer class="footer">
+    <p>Banco Seguro © 2025 | Todos los derechos reservados</p>
+  </footer>
+  <script src="validation.js"></script>
 </body>
-
 </html>
+
